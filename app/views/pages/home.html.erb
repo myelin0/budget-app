@@ -1,0 +1,8 @@
+<%= render 'nav_menu/nav_bar' %>
+<div class="container d-flex flex-column">
+  <h1 class="logo align-self-center font_style">Spend Wisely</h1>
+  <div class="py-5 d-flex flex-column">
+     <%= link_to 'LOG IN', new_user_session_path, class:'btn-mrg btn btn-primary mb-3 py-2' %>
+    <%= link_to 'SIGN UP', new_user_registration_path, class:'btn'%>
+  </div>
+</div>
