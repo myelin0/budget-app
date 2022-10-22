@@ -7,7 +7,7 @@
 ## Live Version
 
 - [heroku](https://budgetemi.herokuapp.com/)
-- [video-demo]()
+- [video-demo](https://www.loom.com/share/53f33695941744fbb6fff5b872cc561a)
 ## Built With
 
 - ![](https://img.shields.io/badge/Github-blueviolet)
