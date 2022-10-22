@@ -1,10 +1,20 @@
+  <nav class="nav-bg d-flex align-items-center">
+    <%= link_to categories_path do %>
+    <em class="bi bi-arrow-left-short icon text-white"></em>
+    <% end %>
+    <p class="ms-auto me-3"><strong>DETAILS</strong></p>
+  </nav>
+<div class="container">
 <p style="color: green"><%= notice %></p>
 
 <%= render @category %>
 
 <div>
-  <%= link_to "Edit this category", edit_category_path(@category) %> |
-  <%= link_to "Back to categories", categories_path %>
+  <div class="d-flex justify-content-between">
 
-  <%= button_to "Destroy this category", @category, method: :delete %>
+ 
+  <%= button_to "Delete this category", @category, method: :delete, class:'btn btn-danger mt-4' %>
+</div>
+<%= link_to "See transactions", category_expenses_path(@category.id), class:'btn btn-primary mt-4' %>
+</div>
 </div>
