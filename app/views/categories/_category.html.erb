@@ -1,17 +1,17 @@
-<div id="<%= dom_id category %>">
-  <p>
-    <strong>Name:</strong>
-    <%= category.name %>
-  </p>
+<ul class="list-group">
+  <li class="list-group-item d-flex justify-content-between">
+    <img src="<%= category.icon %>" alt="icon" />
+    <div>
+      <div class="d-flex justify-content-between align-items-center">
+        <p><%= category.name %></p>
+        <div>
+          <% amount = 0 %> <% category.expenses.each do |expense| %> <% amount +=
+          expense.amount %> <% end %>
+          <strong>$<%= amount %></strong>
+        </div>
+      </div>
+      <p class="date"><%= category.created_at %></p>
+    </div>
+  </li>
+</ul>
 
-  <p>
-    <strong>Icon:</strong>
-    <%= category.icon %>
-  </p>
-
-  <p>
-    <strong>User:</strong>
-    <%= category.user_id %>
-  </p>
-
-</div>
