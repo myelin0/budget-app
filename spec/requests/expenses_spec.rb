@@ -5,11 +5,11 @@ RSpec.describe 'Expenses', type: :request do
   let(:user) { User.create(name: 'user', email: 'example@mail.com', password: 'password') }
   let(:category) do
     Category.create(name: 'Category', icon: 'icon.png', created_at: Time.now,
-                 updated_at: Time.now, user_id: user.id)
+                    updated_at: Time.now, user_id: user.id)
   end
   let(:expense) do
     Expense.create(name: 'Expense', amount: 20, created_at: Time.now, updated_at: Time.now,
-                  user_id: user.id)
+                   user_id: user.id)
   end
 
   describe 'GET /expenses' do

@@ -5,7 +5,7 @@ RSpec.describe 'Categories', type: :request do
   let(:user) { User.create(name: 'user', email: 'example@mail.com', password: 'password') }
   let(:category) do
     Category.create(name: 'Category', icon: 'icon.png', created_at: Time.now,
-                 updated_at: Time.now, user_id: user.id)
+                    updated_at: Time.now, user_id: user.id)
   end
 
   describe 'GET /categories' do

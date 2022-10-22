@@ -1,8 +1,7 @@
 class CategoriesController < ApplicationController
-  
-  before_action :set_category, only: %i[ show edit update destroy ]
+  before_action :set_category, only: %i[show edit update destroy]
   before_action :authenticate_user!
-  
+
   # GET /categories or /categories.json
   def index
     @categories = current_user.categories.includes(:expenses).order(created_at: :asc)
@@ -19,8 +18,7 @@ class CategoriesController < ApplicationController
   end
 
   # GET /categories/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /categories or /categories.json
   def create
@@ -31,7 +29,7 @@ class CategoriesController < ApplicationController
         format.html { redirect_to categories_url(@category), notice: 'Category was successfully created.' }
         format.json { render :show, status: :created, location: @category }
       else
-        format.html { render :new, status: :unprocessable_expense}
+        format.html { render :new, status: :unprocessable_expense }
         format.json { render json: @category.errors, status: :unprocessable_expense }
       end
     end
@@ -72,4 +70,3 @@ class CategoriesController < ApplicationController
     params.require(:category).permit(:name, :icon)
   end
 end
-

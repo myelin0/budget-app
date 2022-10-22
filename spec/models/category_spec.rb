@@ -1,8 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Category, type: :model do
-
-    let(:user) { User.create(name: 'user', email: 'example@mail.com', password: 'password') }
+  let(:user) { User.create(name: 'user', email: 'example@mail.com', password: 'password') }
   subject do
     described_class.new(name: 'Category', icon: 'profile-img.jpg', user_id: user.id)
   end
