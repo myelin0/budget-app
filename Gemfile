@@ -64,7 +64,7 @@ group :development do
   # gem "spring"
 end
 gem 'rubocop', '>= 1.0', '< 2.0'
-gem 'devise'
+gem 'devise', '~> 4.8', '>= 4.8.1'
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem 'capybara'
