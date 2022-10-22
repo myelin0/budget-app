@@ -1,0 +1,12 @@
+<%= render 'nav_menu/nav_bar' %>
+<div class="container">
+<h1 class="mb-3">New Category</h1>
+
+<%= render "form", category: @category%>
+
+<br>
+
+<div>
+  <%= link_to "Back to categories", categories_path, class:'btn btn-primary' %>
+</div>
+</div>

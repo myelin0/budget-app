@@ -1,0 +1,16 @@
+<ul class="list-group">
+  <li class="list-group-item">
+    <div class="d-flex">
+      <img src="<%= expense.category.icon %>" alt="icon" />
+      <%= link_to category_expense_path( expense.category, expense) do %>
+         <p class="ms-4"><%= expense.name %></p>
+        <% end %>
+    
+    </div>
+    <hr />
+    <p>Transaction Nº <%= expense.id %></p>
+    <p><%= expense.created_at %></p>
+    <hr />
+    <p>TOTAL PAYEMENT: <strong>$<%= expense.amount %></strong></p>
+  </li>
+</ul>

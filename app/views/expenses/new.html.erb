@@ -1,0 +1,12 @@
+<%= render 'nav_menu/nav_bar' %>
+<div class="container">
+<h1 class="mb-3">New Transaction</h1>
+
+<%= render "form", expense: @expense %>
+
+<br>
+
+<div>
+  <%= link_to "Back to expenses", category_expenses_path, class:'btn btn-primary' %>
+</div>
+</div>

@@ -1,0 +1,22 @@
+<%= form_for(resource, as: resource_name,  html: {'data-turbo' => "false"}, url: session_path(resource_name)) do |f| %>
+<nav class="nav-bg d-flex justify-content-between align-items-center">
+    <%= link_to root_path do %>
+        <em class="bi bi-arrow-left-short icon text-white"></em>
+     <%end %>
+    <p><strong>LOGIN</strong></p>
+    <%= f.submit "Log in", class:"action-btn" %>
+</nav>
+<div class="container my-4">
+  <div class="form-group">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"form-control mb-2" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :password %><br />
+    <%= f.password_field :password, autocomplete: "current-password", class:"form-control mb-2" %>
+  </div>
+
+<% end %>
+
+<%= render "devise/shared/links" %>
