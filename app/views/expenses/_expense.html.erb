@@ -1,17 +1,16 @@
-<div id="<%= dom_id expense %>">
-  <p>
-    <strong>Name:</strong>
-    <%= expense.name %>
-  </p>
-
-  <p>
-    <strong>Amount:</strong>
-    <%= expense.amount %>
-  </p>
-
-  <p>
-    <strong>User:</strong>
-    <%= expense.user_id %>
-  </p>
-
-</div>
+<ul class="list-group">
+  <li class="list-group-item">
+    <div class="d-flex">
+      <img src="<%= expense.category.icon %>" alt="icon" />
+      <%= link_to category_expense_path( expense.category, expense) do %>
+         <p class="ms-4"><%= expense.name %></p>
+        <% end %>
+    
+    </div>
+    <hr />
+    <p>Transaction Nº <%= expense.id %></p>
+    <p><%= expense.created_at %></p>
+    <hr />
+    <p>TOTAL PAYEMENT: <strong>$<%= expense.amount %></strong></p>
+  </li>
+</ul>

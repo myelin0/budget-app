@@ -7,13 +7,10 @@
 <div id="categories">
   <% @categories.each do |category| %>
     <%= render category %>
-    <p>
-      <%= link_to "Show this category", category %>
-    </p>
   <% end %>
 </div>
 
-<%= link_to "New category", new_category_path %>
+<%= link_to "New category", new_category_path, class:'btn btn-success mt-4' %>
 </div>
 <footer class="d-flex justify-content-center align-items-center py-4">
   <button class="btn-scan mx-4">SCAN</button>
