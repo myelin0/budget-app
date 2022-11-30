@@ -3,8 +3,8 @@
     <%= link_to root_path do %>
         <em class="bi bi-arrow-left-short icon text-white"></em>
      <%end %>
-    <p><strong>LOGIN</strong></p>
-    <%= f.submit "Log in", class:"action-btn" %>
+    <p style='margin-right: 3rem'><strong>LOGIN</strong></p>
+    
 </nav>
 <div class="container my-4">
   <div class="form-group">
@@ -16,7 +16,10 @@
     <%= f.label :password %><br />
     <%= f.password_field :password, autocomplete: "current-password", class:"form-control mb-2" %>
   </div>
-
+<%= f.submit "Log in", class:"action-btn blue" %>
 <% end %>
+<br>
+
+<br>
 
 <%= render "devise/shared/links" %>
