@@ -88,6 +88,7 @@ test:
 #
 production:
   <<: *default
+  url: <% ENV["DATABASE_URL"] %>
   database: budget_production
   username: postgres
-  password: 1
+  password: <% ENV["DATABASE_PASSWORD"] %>
